@@ -522,7 +522,21 @@ body {
 
 .doctor-info {
   padding: 20px;
-  height: 430px;
+  height: 400px;
+}
+
+.doctors-slider .doctor-card {
+  width: 90% !important;
+  box-sizing: border-box;
+}
+
+.doctors-slider .slick-list {
+  padding: 0 0 30px 0;
+}
+
+.doctors-slider .slick-slide > div {
+  display: flex;
+  justify-content: center;
 }
 
 .doctor-info h5 {
@@ -637,8 +651,19 @@ body {
   right: 0;
 }
 
+.testimonial-section .slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  width: 85% !important;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #65696c;
+}
+
 .testimonial-slider {
-  width: 90%;
   margin: auto;
   position: relative;
 }
@@ -781,6 +806,15 @@ body {
 }
 
 /* videos section */
+
+.videos-section .slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.videos-slide {
+  width: 90% !important;
+}
 
 .videos-slide iframe {
   width: 100%;
@@ -1309,9 +1343,9 @@ content: "";
         font-weight: 800;
 }
 
-.doctors-slider .slick-slide {
+/* .doctors-slider .slick-slide {
     margin: 20px 30px;
-}
+} */
 
 .footer-links li{
     font-size:14px;
