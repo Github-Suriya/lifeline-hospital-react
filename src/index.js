@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'glightbox/dist/css/glightbox.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'sal.js/dist/sal.css';
+import './assets/css/style.css';
+import './assets/css/responsive.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
