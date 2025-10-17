@@ -1,15 +1,8 @@
 import React, { useEffect } from "react";
-import sal from "sal.js";
-import GLightbox from "glightbox";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   useEffect(() => {
-    // Initialize animations
-    sal({ threshold: 0.2, once: true });
-
-    // Initialize lightbox (if you’ll use it later)
-    GLightbox();
-
     // Hamburger + Dropdown logic
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
@@ -38,7 +31,9 @@ const Header = () => {
         <div className="inner-header">
           {/* Logo */}
           <div className="logo" data-sal="fade" data-sal-duration="1000">
-            <img src="/assets/img/logo-lifeline.webp" alt="Lifeline Logo" />
+            <Link to="/">
+              <img src="/assets/img/logo-lifeline.webp" alt="Lifeline Logo" />
+            </Link>
           </div>
 
           {/* Hamburger */}
@@ -62,7 +57,7 @@ const Header = () => {
                 <div className="mega-menu">
                   <div className="mega-column">
                     <ul>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-01.png" alt="menu-icon" /> Upper Gl Surgery</a></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-01.png" alt="menu-icon" /> Upper Gl Surgery</Link></li>
                       <li><a href="/"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> HPB Surgery</a></li>
                       <li><a href="/"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> Digestive Cancer Care</a></li>
                       <li><a href="/"> <img src="/assets/img/menu-icon-04.png" alt="menu-icon" /> Colorectal Surgery</a></li>
