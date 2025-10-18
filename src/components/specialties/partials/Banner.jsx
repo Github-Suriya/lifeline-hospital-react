@@ -13,7 +13,7 @@ const Banner = () => {
           </p>
 
           <div className="button-group">
-            <a href="tel:9677222333" className="btn btn-primary">
+            <a href="tel:9677222333" className="btn btn-secondary">
               <svg
                 width="16"
                 height="16"

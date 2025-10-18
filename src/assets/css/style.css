@@ -18,11 +18,13 @@
 :root {
   --primary-color: #f9447f;
   --secondary-color: #004aad;
+  --secondary-rgb: 0, 74, 173;
   --gray-color: #616268;
   --text-color: #222;
   --bg-color: #fff;
-  --light-gray-color: #f6f6f5;
+  --light-gray-color: #fafafa;
   --primary-light-color: #f5e8e8;
+  --primary-dark-color: #ef3b6e;
   --secondary-light-color: #5f8cc9;
   --primary-font: 'Red Hat Display', sans-serif;
   --primary-font-size: 16px;
@@ -1334,7 +1336,7 @@ content: "";
 }
 
 #accordionFlushExample .accordion-button::after {
-    color: #004AAD; 
+    color: var(--secondary-color); 
     font-weight:800;
 }
 

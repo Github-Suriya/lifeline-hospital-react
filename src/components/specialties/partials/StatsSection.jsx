@@ -1,13 +1,13 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-// Reusable component for each individual statistic
-const StatItem = ({ number, isStatic = false, suffix, label }) => {
+const StatItem = ({ number, isStatic = false, suffix, label, style = {} }) => {
   const statStyle = {
     textAlign: 'center',
     color: 'white',
-    padding: '20px',
+    padding: '40px 20px',
     flex: 1,
+    ...style,
   };
 
   const numberStyle = {
@@ -17,9 +17,9 @@ const StatItem = ({ number, isStatic = false, suffix, label }) => {
   };
 
   const labelStyle = {
-    fontSize: '14px',
+    fontSize: '20px',
+    color: '#000',
     letterSpacing: '1.5px',
-    marginTop: '8px',
     textTransform: 'uppercase',
     fontFamily: 'sans-serif',
   };
@@ -39,14 +39,13 @@ const StatItem = ({ number, isStatic = false, suffix, label }) => {
   );
 };
 
-// Main section component that holds all the stats
 const StatsSection = () => {
   return (
     <div className="stats-section">
         <div className='container'>
             <div className="stats-wrapper">
                 <StatItem number={200000} suffix=" +" label="Lives Touched" />
-                <StatItem number={5000} suffix=" +" label="Day Care Surgeries" />
+                <StatItem number={5000} suffix=" +" label="Day Care Surgeries" style={{ backgroundColor: 'var(--primary-dark-color)' }} />
                 <StatItem number="NO.1" isStatic={true} label="Gastro & Bariatrics" />
             </div>
         </div>

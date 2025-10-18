@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/include/Header";
 import Footer from "./components/include/Footer";
+import ContactSection from "./components/include/ContactSection";
 import Home from "./components/home/Home";
 import Specialties from "./components/specialties/Specialties";
 import ScrollAndSal from "./components/util/ScrollAndSal";
@@ -23,6 +24,7 @@ function App() {
           </Routes>
         </ScrollAndSal>
       </main>
+      <ContactSection />
       <Footer />
     </Router>
   );

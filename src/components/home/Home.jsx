@@ -15,7 +15,6 @@ import VideosSection from "./VideosSection";
 import BlogSection from "./BlogSection";
 import FaqSection from "./FaqSection";
 import MapSection from "./MapSection";
-import ContactSection from "./ContactSection";
 
 const Home = () => {
     return(
@@ -37,7 +36,6 @@ const Home = () => {
         <BlogSection />
         <FaqSection />
         <MapSection />
-        <ContactSection />
         </>
     )
 };
