@@ -1,7 +1,7 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-const StatItem = ({ number, isStatic = false, suffix, label, style = {} }) => {
+const StatItem = ({ number, isStatic = false, suffix, label, style = {}, ...rest }) => {
   const statStyle = {
     textAlign: 'center',
     color: 'white',
@@ -25,7 +25,7 @@ const StatItem = ({ number, isStatic = false, suffix, label, style = {} }) => {
   };
 
   return (
-    <div style={statStyle}>
+    <div style={statStyle} {...rest}>
       <div style={numberStyle}>
         {isStatic ? (
           number
@@ -44,9 +44,9 @@ const StatsSection = () => {
     <div className="stats-section">
         <div className='container'>
             <div className="stats-wrapper">
-                <StatItem number={200000} suffix=" +" label="Lives Touched" />
-                <StatItem number={5000} suffix=" +" label="Day Care Surgeries" style={{ backgroundColor: 'var(--primary-dark-color)' }} />
-                <StatItem number="NO.1" isStatic={true} label="Gastro & Bariatrics" />
+                <StatItem data-sal="fade" data-sal-duration="1000" number={200000} suffix=" +" label="Lives Touched" />
+                <StatItem data-sal="fade" data-sal-duration="1000" data-sal-delay="200" number={5000} suffix=" +" label="Day Care Surgeries" style={{ backgroundColor: 'var(--primary-dark-color)' }} />
+                <StatItem data-sal="fade" data-sal-duration="1000" data-sal-delay="400" number="NO.1" isStatic={true} label="Gastro & Bariatrics" />
             </div>
         </div>
     </div>

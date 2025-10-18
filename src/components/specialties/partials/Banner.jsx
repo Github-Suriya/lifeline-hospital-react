@@ -67,15 +67,15 @@ const Banner = () => {
       <div className="container">
         {/* Text Content */}
         <div className="text-content">
-          <h1>Expert Gastro Care</h1>
-          <p>
+          <h1 data-sal="fade" data-sal-duration="800" data-sal-delay="200">Expert Gastro Care</h1>
+          <p data-sal="fade" data-sal-duration="800" data-sal-delay="400">
             At Lifeline Hospital, our Gastroenterology specialists provide
             advanced diagnosis and treatment for digestive health issues. From
             acid reflux to liver disorders, we ensure personalized care with
             cutting-edge technology.
           </p>
 
-          <div className="button-group">
+          <div className="button-group" data-sal="slide-up" data-sal-duration="800" data-sal-delay="600">
             <a href="tel:9677222333" className="btn btn-secondary">
               <svg
                 width="16"
@@ -88,14 +88,12 @@ const Banner = () => {
               </svg>
               96 77 222 333
             </a>
-            <a href="#" className="btn btn-secondary">
-              Book Appointment
-            </a>
+            <a href="#" className="btn btn-secondary">Book Appointment</a>
           </div>
         </div>
 
         {/* Image and Orbit Icons */}
-        <div className="image-content" ref={containerRef}>
+        <div className="image-content" ref={containerRef} data-sal="zoom-in" data-sal-duration="1000" data-sal-delay="300">
           <div className="orbit-container">
             {/* Main Display Area */}
             <div className={`main-display ${activeIcon ? 'active' : ''}`}>
