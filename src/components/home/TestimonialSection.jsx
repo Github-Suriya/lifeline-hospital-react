@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { useLocation } from "react-router-dom";
 
 const testimonials = [
   {
@@ -55,7 +56,10 @@ const testimonials = [
   },
 ];
 
+
 const TestimonialSection = () => {
+  const location = useLocation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -72,11 +76,13 @@ const TestimonialSection = () => {
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
+  
+  const isSpecialtiesPage = location.pathname.toLowerCase().includes("specialties");
 
   return (
     <section className="testimonial-section">
       <div className="container position-relative">
-        <h2 className="section-title">As told by our Patients</h2>
+        <h2 className="section-title">{isSpecialtiesPage ? (<>Lifeline Hospital Through the <br /> Eyes of Our Patients</>) : "As told by our Patients"}</h2>
         <p className="section-subtitle">Patients Corner</p>
 
         <Slider {...settings} className="testimonial-wrapper">

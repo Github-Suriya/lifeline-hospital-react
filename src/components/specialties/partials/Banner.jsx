@@ -1,4 +1,67 @@
+import React, { useState, useEffect, useRef } from "react";
+
 const Banner = () => {
+  // Local state to track which icon is active
+  const [activeIcon, setActiveIcon] = useState(null);
+  const containerRef = useRef(null);
+
+  // Data for each icon’s popup content
+  const iconData = [
+    {
+      id: 1,
+      img: "/assets/img/spacialities-icon-05.png",
+      title: "Advanced Endoscopy",
+      description:
+        "Our specialists use state-of-the-art endoscopic tools for accurate diagnosis and minimally invasive treatment of digestive conditions.",
+    },
+    {
+      id: 2,
+      img: "/assets/img/spacialities-icon-06.png",
+      title: "Liver & Pancreas Care",
+      description:
+        "Comprehensive care for liver, gallbladder, and pancreas disorders led by experienced gastroenterologists.",
+    },
+    {
+      id: 3,
+      img: "/assets/img/spacialities-icon-03.png",
+      title: "Colorectal Surgery",
+      description:
+        "Expertise in treating colorectal diseases with both surgical and non-surgical methods, ensuring faster recovery.",
+    },
+    {
+      id: 4,
+      img: "/assets/img/spacialities-icon-03.png",
+      title: "Digestive Health",
+      description:
+        "From acid reflux to complex GI issues, our specialists deliver personalized care with advanced technology.",
+    },
+    {
+      id: 5,
+      img: "/assets/img/spacialities-icon-04.png",
+      title: "Gallbladder Treatments",
+      description:
+        "Specialized in laparoscopic gallbladder removal and management of related digestive disorders.",
+    },
+    {
+      id: 6,
+      img: "/assets/img/spacialities-icon-01.png",
+      title: "Nutritional Support",
+      description:
+        "Our team provides dietary and lifestyle guidance to support digestive wellness and recovery.",
+    },
+  ];
+
+  // Detect click outside to reset the active state
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setActiveIcon(null);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
     <section className="gastro-care-banner">
       <div className="container">
@@ -32,38 +95,39 @@ const Banner = () => {
         </div>
 
         {/* Image and Orbit Icons */}
-        <div className="image-content">
+        <div className="image-content" ref={containerRef}>
           <div className="orbit-container">
-            <img
-              src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Surgical procedure"
-              className="main-image"
-            />
+            {/* Main Display Area */}
+            <div className={`main-display ${activeIcon ? 'active' : ''}`}>
+              {activeIcon ? (
+                <div className="icon-content fade-in">
+                  <h3>{iconData.find((i) => i.id === activeIcon)?.title}</h3>
+                  <p>{iconData.find((i) => i.id === activeIcon)?.description}</p>
+                </div>
+              ) : (
+                <img
+                  src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Surgical procedure"
+                  className="main-image"
+                />
+              )}
+            </div>
 
             {/* Orbit Icons */}
-            <div className="icon-wrapper icon-1">
-                <img src="/assets/img/spacialities-icon-05.png" alt="spacialities-icon-05" />
-            </div>
-
-            <div className="icon-wrapper icon-2">
-                <img src="/assets/img/spacialities-icon-06.png" alt="spacialities-icon-06" />
-            </div>
-
-            <div className="icon-wrapper icon-3">
-                <img src="/assets/img/spacialities-icon-03.png" alt="spacialities-icon-03" />
-            </div>
-
-            <div className="icon-wrapper icon-4">
-                <img src="/assets/img/spacialities-icon-03.png" alt="spacialities-icon-03" />
-            </div>
-
-            <div className="icon-wrapper icon-5">
-                <img src="/assets/img/spacialities-icon-04.png" alt="spacialities-icon-04" />
-            </div>
-
-            <div className="icon-wrapper icon-6">
-                <img src="/assets/img/spacialities-icon-01.png" alt="spacialities-icon-01" />
-            </div>
+            {iconData.map((icon, index) => (
+              <div
+                key={icon.id}
+                className={`icon-wrapper icon-${index + 1} ${
+                  activeIcon === icon.id ? "active" : ""
+                }`}
+                onClick={(e) => {
+                  e.stopPropagation(); // prevent outer click
+                  setActiveIcon(icon.id);
+                }}
+              >
+                <img src={icon.img} alt={`icon-${icon.id}`} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

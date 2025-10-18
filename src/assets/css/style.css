@@ -645,6 +645,7 @@ body {
 .testimonial-section {
   padding: 60px 0 120px 0;
   background-color: #e8ecef;
+  margin-bottom: 290px;
 }
 
 .testimonial-wrapper {
@@ -756,7 +757,6 @@ body {
 /* latest news section */
 
 .progress-section.latest-news-section {
-  margin-top: 290px;
   height: 350px;
 }
 
@@ -1027,7 +1027,6 @@ body {
 }
 
 .map-section {
-       
   height: 70vh;         
   overflow: hidden;
 }

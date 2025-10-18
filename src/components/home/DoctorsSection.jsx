@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 
 const doctors = [
@@ -78,9 +79,11 @@ const doctors = [
       "Abdominal wall hernia surgeries",
     ],
   },
-];
+  ];
 
 const DoctorsSection = () => {
+  const location = useLocation();
+
   useEffect(() => {
     document.querySelectorAll(".doctor-card").forEach((card, index) => {
       card.setAttribute("data-sal", "slide-up");
@@ -88,6 +91,9 @@ const DoctorsSection = () => {
       card.setAttribute("data-sal-delay", 100 + index * 200);
     });
   }, []);
+
+  // Check if URL contains "specialties"
+  const isSpecialtiesPage = location.pathname.toLowerCase().includes("specialties");
 
   const settings = {
     dots: false,
@@ -109,34 +115,33 @@ const DoctorsSection = () => {
       </button>
     ),
     responsive: [
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
+      { breakpoint: 992, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
-    <section className="doctors-section">
+    <section
+      className={`doctors-section`}
+    >
       <h2
-        className="section-title"
+        className={`section-title ${isSpecialtiesPage ? "text-capitalize mb-5" : ""}`}
         data-sal="fade"
         data-sal-duration="1000"
         data-sal-delay="100"
       >
-        OUR DOCTORS
+        {isSpecialtiesPage ? (<>Meet the Minds Behind Exceptional <br /> Gastro Care</>) : "OUR DOCTORS"}
       </h2>
+
       <p
         className="section-subtitle"
         data-sal="fade"
         data-sal-duration="1000"
         data-sal-delay="300"
       >
-        Lifeline Multispeciality Consultants
+        {isSpecialtiesPage
+          ? ""
+          : "Lifeline Multispeciality Consultants"}
       </p>
 
       <div className="container doctors-slider">
@@ -172,7 +177,7 @@ const DoctorsSection = () => {
             data-sal-duration="1000"
             data-sal-delay="100"
           >
-            MORE DOCTORS
+            {isSpecialtiesPage ? "VIEW ALL SPECIALISTS" : "MORE DOCTORS"}
           </a>
         </div>
       </div>
