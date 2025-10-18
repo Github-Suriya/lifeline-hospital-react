@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 const doctors = [
@@ -170,15 +171,15 @@ const DoctorsSection = () => {
 
       <div className="row pt-5">
         <div className="col-12">
-          <a
-            href="#"
+          <Link
+            to="/doctorslist"
             className="about-btn"
             data-sal="slide-up"
             data-sal-duration="1000"
             data-sal-delay="100"
           >
             {isSpecialtiesPage ? "VIEW ALL SPECIALISTS" : "MORE DOCTORS"}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

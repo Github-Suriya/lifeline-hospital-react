@@ -58,43 +58,43 @@ const Header = () => {
                   <div className="mega-column">
                     <ul>
                       <li><Link to="/specialties"> <img src="/assets/img/menu-icon-01.png" alt="menu-icon" /> Upper Gl Surgery</Link></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> HPB Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> Digestive Cancer Care</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-04.png" alt="menu-icon" /> Colorectal Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-05.png" alt="menu-icon" /> Hernia</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-05.png" alt="menu-icon" /> Bariatric Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-07.png" alt="menu-icon" /> Diabetic Prevention/Reversal</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-08.png" alt="menu-icon" /> Laparoscopic Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-09.png" alt="menu-icon" /> Advanced Endoscopy</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-10.png" alt="menu-icon" /> Medical Gastroenterology</a></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> HPB Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-02.png" alt="menu-icon" /> Digestive Cancer Care</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-04.png" alt="menu-icon" /> Colorectal Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-05.png" alt="menu-icon" /> Hernia</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-05.png" alt="menu-icon" /> Bariatric Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-07.png" alt="menu-icon" /> Diabetic Prevention/Reversal</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-08.png" alt="menu-icon" /> Laparoscopic Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-09.png" alt="menu-icon" /> Advanced Endoscopy</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-10.png" alt="menu-icon" /> Medical Gastroenterology</Link></li>
                     </ul>
                   </div>
                   <div className="mega-column bg-primary-light">
                     <ul>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> General Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> Nutrition/Dietetics</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> Oncology & Onco-Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-14.png" alt="menu-icon" /> Obstertics & Gynaecology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-15.png" alt="menu-icon" /> Urology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-16.png" alt="menu-icon" /> Nephrology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-17.png" alt="menu-icon" /> Pulmonology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-18.png" alt="menu-icon" /> Orthopaedics</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-19.png" alt="menu-icon" /> Dermatology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Anesthesia & Pain Clinic</a></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> General Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> Nutrition/Dietetics</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-11.png" alt="menu-icon" /> Oncology & Onco-Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-14.png" alt="menu-icon" /> Obstertics & Gynaecology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-15.png" alt="menu-icon" /> Urology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-16.png" alt="menu-icon" /> Nephrology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-17.png" alt="menu-icon" /> Pulmonology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-18.png" alt="menu-icon" /> Orthopaedics</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-19.png" alt="menu-icon" /> Dermatology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Anesthesia & Pain Clinic</Link></li>
                     </ul>
                   </div>
                   <div className="mega-column">
                     <ul>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Emergency Medicine</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> ENT</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Endocrine Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-24.png" alt="menu-icon" /> Oral & Maxillofacial Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-25.png" alt="menu-icon" /> Plastic Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-26.png" alt="menu-icon" /> Psychiatry</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-26.png" alt="menu-icon" /> Neurology</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-28.png" alt="menu-icon" /> Vascular Surgery</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-29.png" alt="menu-icon" /> Geriatrics</a></li>
-                      <li><a href="/"> <img src="/assets/img/menu-icon-30.png" alt="menu-icon" /> Cardiology</a></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Emergency Medicine</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> ENT</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-20.png" alt="menu-icon" /> Endocrine Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-24.png" alt="menu-icon" /> Oral & Maxillofacial Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-25.png" alt="menu-icon" /> Plastic Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-26.png" alt="menu-icon" /> Psychiatry</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-26.png" alt="menu-icon" /> Neurology</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-28.png" alt="menu-icon" /> Vascular Surgery</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-29.png" alt="menu-icon" /> Geriatrics</Link></li>
+                      <li><Link to="/specialties"> <img src="/assets/img/menu-icon-30.png" alt="menu-icon" /> Cardiology</Link></li>
                     </ul>
                   </div>
                 </div>

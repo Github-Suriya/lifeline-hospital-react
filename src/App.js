@@ -11,21 +11,23 @@ import ScrollAndSal from "./components/util/ScrollAndSal";
 // Slider CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DoctorsList from "./components/doctorsList/DoctorsList";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <main>
+        <Header />
         <ScrollAndSal>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/specialties" element={<Specialties />} />
-          </Routes>
+          <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/specialties" element={<Specialties />} />
+                <Route path="/doctorslist" element={<DoctorsList />} />
+              </Routes>
+          </main>
+          <ContactSection />
+          <Footer />
         </ScrollAndSal>
-      </main>
-      <ContactSection />
-      <Footer />
     </Router>
   );
 }
